@@ -43,6 +43,12 @@ class CalendarsController < ApplicationController
 
       @week_days.push(days)
     end
-
+    
+    def create
+      binding.pry
+      Plan.create(plan_params)
+      redirect_to action: :index
+    end
+    
   end
 end
